@@ -6,6 +6,7 @@ import Foundation
         var checks = 0
         func check(_ condition: Bool, _ text: String) {
             precondition(condition, text); checks += 1
+            print("  ok  \(text)")
         }
         func wait(_ condition: () -> Bool) {
             let deadline = Date().addingTimeInterval(3)
@@ -22,7 +23,7 @@ import Foundation
         let key = WarpDestinationKey(corners[0],corners[1],corners[2],corners[3])
         for i in 0..<4 { for axis in 0..<2 {
             var changed = corners; changed[i][axis] = changed[i][axis].nextUp
-            check(WarpDestinationKey(changed[0],changed[1],changed[2],changed[3]) != key, "one ULP must not alias")
+            check(WarpDestinationKey(changed[0],changed[1],changed[2],changed[3]) != key, "one ULP on corner \(i) \(axis == 0 ? "x" : "y") must not alias")
         } }
         let encoder = PropertyListEncoder(); encoder.outputFormat = .binary
         let first = try encoder.encode(Packet(sequence: 1)), second = try encoder.encode(Packet(sequence: 2))

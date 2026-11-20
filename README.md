@@ -2,6 +2,8 @@
 
 Selected Swift implementation examples from a personal Swift/SpriteKit recreation project. This repository demonstrates performance work, multiplayer timing and packet handling, and the tests used to check correctness. It is a curated showcase, not the complete game or an installable distribution.
 
+![How the guest draws the host's battle: 20 Hz snapshots, a 150 ms presentation buffer, and why it absorbs late arrivals](media/multiplayer-timing.svg)
+
 ## Code examples
 
 | File | What it shows |
@@ -12,7 +14,11 @@ Selected Swift implementation examples from a personal Swift/SpriteKit recreatio
 | [`code/multiplayer/OrderedPacketDecoder.swift`](code/multiplayer/OrderedPacketDecoder.swift) | An adapted standalone serial decoder with packet/byte limits, FIFO main-thread delivery and generation cancellation. |
 | [`tests/ShowcaseTests.swift`](tests/ShowcaseTests.swift) | Seeded brute-force comparisons for the index, clock jitter and outage bounds, cadence, frame-budget, Float precision, queue-bound, ordered-delivery and stale-callback checks, all with synthetic data. |
 
-Run `./scripts/test.sh` on macOS with Xcode command-line tools. These examples build independently of the original game and its assets. See [architecture](docs/architecture.md), [measured results and limits](docs/performance.md), and [provenance](docs/provenance.md).
+Run `./scripts/test.sh` on macOS with Xcode command-line tools. Each check prints its name:
+
+![Showcase test run: 33 checks pass](media/test-run.svg)
+
+These examples build independently of the original game and its assets. See [architecture](docs/architecture.md), [measured results and limits](docs/performance.md), and [provenance](docs/provenance.md).
 
 ## Redistribution boundary
 

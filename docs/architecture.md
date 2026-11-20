@@ -4,6 +4,8 @@ The complete application uses Swift and SpriteKit. Multiplayer runs over a local
 
 ## Performance
 
+![CombatTargetIndex nearest search: walk outward through occupied bins and stop once the next bin is farther than the best match](../media/target-index.svg)
+
 `CombatTargetIndex` keeps each team's units in fixed-width horizontal bins, with a sorted list of occupied bins. Nearest-target search walks outward from the origin's bin and stops once the next bin is farther than the best match. Range queries visit only overlapping bins. Every query reproduces a linear scan exactly, including which of two equally distant units wins (the earlier one in the caller's array), so it could replace scans without changing combat outcomes. Callers own all game rules through predicates; the index holds no damage, health or authority logic. Rebuilds reuse existing records and buckets, and range visits snapshot their candidates into reused per-depth buffers, so a visitor can safely run nested queries or mutate units.
 
 `PresentationFrameBudget` shares one allowance across repeated callbacks for the same frame. Repeating `beginFrame` with the same identifier does not replenish it. This can distribute cosmetic construction across frames while authoritative simulation stays immediate.
@@ -11,6 +13,8 @@ The complete application uses Swift and SpriteKit. Multiplayer runs over a local
 `WarpDestinationKey` records the eight existing Float coordinate bit patterns of a fixed-source quad. Identical output can share immutable grid geometry even when its animation timestamps differ. One-ULP changes remain distinct. It does not round timestamps, reduce pose rates or change coordinates. Texture/model identity is intentionally absent because it does not change that grid object.
 
 ## Multiplayer timing
+
+![How the guest draws the host's battle](../media/multiplayer-timing.svg)
 
 `SnapshotCadence` publishes host state at 20 Hz regardless of render rate. After a hitch it publishes once and resumes the original phase, instead of sending a burst of duplicate snapshots.
 
