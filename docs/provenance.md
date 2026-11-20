@@ -1,7 +1,16 @@
 # Code provenance and scope
 
-The examples are project-authored implementation work, not extracted game code. `PerformancePrimitives.swift` contains selected components from the private project's `DarknessDefensePrototype/PerformanceSupport.swift`. `OrderedPacketDecoder.swift` adapts the bounded serial decoding/generation design in `DarknessDefensePrototype/MatchSession.swift` into a generic, independently buildable example. Its synthetic packet tests were written for this showcase.
+The examples are project-authored implementation work, not extracted game code. They are exported unchanged from the private project, except where noted:
 
-The private exporter contains the exact source-file allowlist and hashes. `SYNC_MANIFEST.json` records the private commit used for each export. Adapted code is labeled; this repository does not claim to contain the complete multiplayer or rendering implementation.
+| Public file | Private source |
+| --- | --- |
+| `code/performance/PerformancePrimitives.swift` | Selected declarations from `DarknessDefensePrototype/PerformanceSupport.swift` |
+| `code/performance/CombatTargetIndex.swift` | The `CombatTargetIndex` declaration from `DarknessDefensePrototype/CombatTargetIndex.swift` |
+| `code/multiplayer/PresentationTiming.swift` | `GuestPresentationClock` and `SnapshotCadence` from `DarknessDefensePrototype/MatchTypes.swift` |
+| `code/multiplayer/OrderedPacketDecoder.swift` | Adapted from the bounded serial decoding/generation design in `DarknessDefensePrototype/MatchSession.swift` into a generic, independently buildable example |
+
+The tests in `tests/ShowcaseTests.swift` were written for this showcase and use synthetic data.
+
+The private exporter contains a reviewed table of exactly which declarations may be published, and refuses any allowlist that differs from it. `SYNC_MANIFEST.json` records the private commit and file hashes for each export. This repository does not claim to contain the complete multiplayer or rendering implementation.
 
 No extracted Lua, recovered tables, animation/model data, original assets, binaries, internal handoffs or raw private logs are included. The online availability of original material is not treated as a redistribution license. No open-source license has been selected; do not infer permission to redistribute third-party material from these examples.

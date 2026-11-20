@@ -2,29 +2,33 @@
   "direction": "private-to-public",
   "files": {
     ".gitignore": "23bbddd656a0a577b9d7df0a9c72b248b7c253ef7b28ca654e355e99ea5b90dd",
-    "README.md": "1f505d4d14cfa86aab82b38e0099322465e2897e2f6d3e22aa123a652dcba8d3",
+    "README.md": "3cd122c1e0a7789a6b6bb450ba2c4cb40995f766da6942c8a4373ac7d5241c94",
     "code/multiplayer/OrderedPacketDecoder.swift": "ebe9595473c6517f124955f9040d35e541ceed7ee0039560c4d7b8070294c340",
-    "code/performance/PerformancePrimitives.swift": "50e55cdabf9349e114397a6518c9e5514ccc0e0e59572d1b7aab471be146a529",
-    "docs/architecture.md": "1b219b65d961a53e3fb2fb614f61653ae9a2f414de481549022a7d24106d4f76",
-    "docs/performance.md": "10ae8e7bcec56181ba286cfe3c25984696d7fdf36b82b4f0df821b16ca39c8a5",
-    "docs/provenance.md": "ed086e2430b957898a46e904555db4da4cb8e0513099a8ba48786ad3f99e2f29",
+    "code/multiplayer/PresentationTiming.swift": "2e314ee6d04d726d668044bfeb9093e93f185d34343147297e72ad4d72a8bbed",
+    "code/performance/CombatTargetIndex.swift": "968252d5c88bd0981484e04edec6f13a20df8cc63aeda14e9db52c9c5e9399c8",
+    "code/performance/PerformancePrimitives.swift": "ed2a4021b8c4ee537c07d8e58b7bc84e31a690b9c4a8d962ce57e6937bd48e0b",
+    "docs/architecture.md": "ce1b4293902f71b4a5454c7dcc93b6da517739c2f09c299e1412a378b1e6131a",
+    "docs/performance.md": "aa5acdeddbd95358780cc2633b7166dbaf02766ffc68a4e12b9e165d594df775",
+    "docs/provenance.md": "e4be692e8261a43c2a3eb419ebe277d4f149eb8314308b4dddcbc7592d800a57",
     "docs/sync.md": "077374d1a8264cc179843aeade7f4c17cabcfc09b704b2980364c738429ccf40",
-    "scripts/test.sh": "f6e162ba466560d2ca4a2d33051246a33d697c1642c40337baf614d5245bdf36",
-    "tests/ShowcaseTests.swift": "262bfe2a471165e9a045e3cb0eaddc3c5431f73dfb8f4a8c7496cb64264c34b6"
+    "scripts/test.sh": "4634808f879fd0a54c14863a367363f70e062c0bc868882f73a45a63545779c7",
+    "tests/ShowcaseTests.swift": "5a62dd14469660fe20b8da05edb846a727e6e0b39facf87f7102aa8cb3547ac8"
   },
   "note": "Explicit code/document allowlist only; no assets, recovered data, or private Git history.",
-  "private_source_commit": "5176dedcdd1e219214cc3c6198d3616b21fb4b19",
+  "private_source_commit": "a1d7e33228693de841b9e32fb604865c18843010",
   "schema": 1,
   "source_hashes": {
-    "DarknessDefensePrototype/PerformanceSupport.swift": "4dfcdbbd658c10738ebc4f3d35ff90ef5eaa664d2c4e6cd79501c4ab778acd3a",
+    "DarknessDefensePrototype/CombatTargetIndex.swift": "1cf0f387cbfe66de4f69d179d2e2d68a75ed9e7765c755e1e8c326015989951b",
+    "DarknessDefensePrototype/MatchTypes.swift": "640b5014e147999bfe702567e7def497b69f90f7708f5607146d5019c8c4f19b",
+    "DarknessDefensePrototype/PerformanceSupport.swift": "ee82222d3ed73f65dfdeaae8fbf22b08b0f9c6b762d22430cbbaafa00be0a140",
     "showcase/content/.gitignore": "23bbddd656a0a577b9d7df0a9c72b248b7c253ef7b28ca654e355e99ea5b90dd",
-    "showcase/content/README.md": "1f505d4d14cfa86aab82b38e0099322465e2897e2f6d3e22aa123a652dcba8d3",
+    "showcase/content/README.md": "3cd122c1e0a7789a6b6bb450ba2c4cb40995f766da6942c8a4373ac7d5241c94",
     "showcase/content/code/multiplayer/OrderedPacketDecoder.swift": "ebe9595473c6517f124955f9040d35e541ceed7ee0039560c4d7b8070294c340",
-    "showcase/content/docs/architecture.md": "1b219b65d961a53e3fb2fb614f61653ae9a2f414de481549022a7d24106d4f76",
-    "showcase/content/docs/performance.md": "10ae8e7bcec56181ba286cfe3c25984696d7fdf36b82b4f0df821b16ca39c8a5",
-    "showcase/content/docs/provenance.md": "ed086e2430b957898a46e904555db4da4cb8e0513099a8ba48786ad3f99e2f29",
+    "showcase/content/docs/architecture.md": "ce1b4293902f71b4a5454c7dcc93b6da517739c2f09c299e1412a378b1e6131a",
+    "showcase/content/docs/performance.md": "aa5acdeddbd95358780cc2633b7166dbaf02766ffc68a4e12b9e165d594df775",
+    "showcase/content/docs/provenance.md": "e4be692e8261a43c2a3eb419ebe277d4f149eb8314308b4dddcbc7592d800a57",
     "showcase/content/docs/sync.md": "077374d1a8264cc179843aeade7f4c17cabcfc09b704b2980364c738429ccf40",
-    "showcase/content/scripts/test.sh": "f6e162ba466560d2ca4a2d33051246a33d697c1642c40337baf614d5245bdf36",
-    "showcase/content/tests/ShowcaseTests.swift": "262bfe2a471165e9a045e3cb0eaddc3c5431f73dfb8f4a8c7496cb64264c34b6"
+    "showcase/content/scripts/test.sh": "4634808f879fd0a54c14863a367363f70e062c0bc868882f73a45a63545779c7",
+    "showcase/content/tests/ShowcaseTests.swift": "5a62dd14469660fe20b8da05edb846a727e6e0b39facf87f7102aa8cb3547ac8"
   }
 }

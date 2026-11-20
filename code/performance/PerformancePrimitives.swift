@@ -1,6 +1,7 @@
 // Selected project-authored components; no game data or assets.
 import Foundation
 
+/// One budget shared by update and all action completions in the same frame.
 struct PresentationFrameBudget {
     let limit: Int
     private var frame: Double?
@@ -16,6 +17,8 @@ struct PresentationFrameBudget {
     }
 }
 
+/// Cancellation never waits for decoding or audio work. Owners publish results
+/// only after checking this token again on their serialized execution context.
 final class WorkCancellation {
     private let lock = NSLock()
     private var cancelled = false
@@ -23,6 +26,8 @@ final class WorkCancellation {
     func cancel() { lock.lock(); cancelled = true; lock.unlock() }
 }
 
+/// Exact destination identity: reuse only the Float coordinates SpriteKit receives.
+/// No animation-time rounding, quantization or pose-rate reduction.
 struct WarpDestinationKey: Hashable {
     let x0, y0, x1, y1, x2, y2, x3, y3: UInt32
     init(_ p0: SIMD2<Float>, _ p1: SIMD2<Float>, _ p2: SIMD2<Float>, _ p3: SIMD2<Float>) {
